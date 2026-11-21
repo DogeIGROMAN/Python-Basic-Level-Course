@@ -1,0 +1,72 @@
+{
+    "laboratory_work": 10,
+    "variant": 16,
+    "subsystem": "OTDR Optical Fiber Diagnostics",
+    "generated_at": "2026-11-21 16:24:13",
+    "csv_analysis": {
+        "source_file": "fiber.csv",
+        "filtered_output_file": "splices_detected.csv",
+        "criterion": "attenuation_db_km > 0.25",
+        "total_segments_scanned": 7,
+        "splices_detected_count": 3,
+        "mean_line_attenuation_db_km": 0.3286,
+        "mean_splice_attenuation_db_km": 0.4767,
+        "max_splice_attenuation_db_km": 0.62,
+        "detected_splices": [
+            {
+                "segment_id": "SEG-02",
+                "distance_km": "1.15",
+                "attenuation_db_km": "0.34",
+                "excess_over_threshold_db_km": "0.09",
+                "reflectance_db": "-48.1",
+                "event_note": "Fusion splice #1"
+            },
+            {
+                "segment_id": "SEG-04",
+                "distance_km": "3.60",
+                "attenuation_db_km": "0.47",
+                "excess_over_threshold_db_km": "0.22",
+                "reflectance_db": "-41.5",
+                "event_note": "Mechanical splice #2"
+            },
+            {
+                "segment_id": "SEG-06",
+                "distance_km": "6.30",
+                "attenuation_db_km": "0.62",
+                "excess_over_threshold_db_km": "0.37",
+                "reflectance_db": "-39.2",
+                "event_note": "High-loss splice #3"
+            }
+        ]
+    },
+    "binary_audit": {
+        "binary_file": "otdr_trace.bin",
+        "magic_signature_hex": "0x4F505443",
+        "magic_signature_ascii": "OPTC",
+        "signature_valid": true,
+        "protocol_version": 2,
+        "wavelength_nm": 1550,
+        "crc_tag_hex": "0x0000A1B2",
+        "header_size_bytes": 16,
+        "payload_size_bytes": 32,
+        "total_file_size_bytes": 48,
+        "cursor_positions": {
+            "after_magic": 4,
+            "after_header": 16,
+            "payload_start_seek": 16,
+            "after_payload_read": 48
+        },
+        "sample_count": 8,
+        "trace_samples_db": [
+            -12.4,
+            -12.9,
+            -13.5,
+            -14.8,
+            -15.2,
+            -16.9,
+            -17.4,
+            -18.1
+        ]
+    },
+    "overall_status": "WARNING_SPLICES_DETECTED"
+}

@@ -1,0 +1,8 @@
+segment_id,distance_km,attenuation_db_km,reflectance_db,event_note
+SEG-01,0.42,0.19,-52.4,Regular fiber
+SEG-02,1.15,0.34,-48.1,Fusion splice #1
+SEG-03,2.08,0.21,-54.0,Regular fiber
+SEG-04,3.6,0.47,-41.5,Mechanical splice #2
+SEG-05,4.95,0.25,-51.8,Threshold boundary
+SEG-06,6.3,0.62,-39.2,High-loss splice #3
+SEG-07,7.8,0.22,-53.1,Regular fiber

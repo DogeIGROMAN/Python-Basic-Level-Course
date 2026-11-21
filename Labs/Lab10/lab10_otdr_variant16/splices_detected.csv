@@ -1,0 +1,4 @@
+segment_id,distance_km,attenuation_db_km,excess_over_threshold_db_km,reflectance_db,event_note
+SEG-02,1.15,0.34,0.09,-48.1,Fusion splice #1
+SEG-04,3.60,0.47,0.22,-41.5,Mechanical splice #2
+SEG-06,6.30,0.62,0.37,-39.2,High-loss splice #3
