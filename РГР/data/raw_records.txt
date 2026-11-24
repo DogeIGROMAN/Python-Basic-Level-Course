@@ -1,0 +1,17 @@
+# Тестовий набір записів для аудиту та перерозподілу ліцензій ПЗ
+# Формат: DEPT=... | CODE=... | TOTAL=... | USED=... | COST=... | TYPE=SUB|PERP
+
+# 1. Продукт JET-1042: DEV має надлишок (5 вільних), QA і SEC мають дефіцит (разом 5 місць)
+DEPT=dev | CODE=jet-1042 | TOTAL=25 | USED=20 | COST=150.0 | TYPE=SUB
+DEPT=qa | CODE=JET-1042 | TOTAL=5 | USED=8 | COST=150.0 | TYPE=PERP
+DEPT=sec | CODE=JET-1042 | TOTAL=4 | USED=6 | COST=150.0 | TYPE=SUB
+
+# 2. Продукт FIG-2020: DESIGN має надлишок (6 вільних), PROD має дефіцит (4 місця) - 2 місця залишаться вільними
+DEPT=design | CODE=fig-2020 | TOTAL=18 | USED=12 | COST=80.0 | TYPE=SUB
+DEPT=prod | CODE=FIG-2020 | TOTAL=6 | USED=10 | COST=80.0 | TYPE=PERP
+
+# 3. Продукт DOC-300: лише надлишок, дефіциту немає (перерозподіл не відбувається)
+DEPT=hr | CODE=doc-300 | TOTAL=10 | USED=7 | COST=45.0 | TYPE=PERP
+
+# 4. Продукт CLD-900: лише дефіцит, донорів немає (дефіцит залишається неперекритим)
+DEPT=ops | CODE=cld-900 | TOTAL=3 | USED=5 | COST=200.0 | TYPE=SUB
