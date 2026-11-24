@@ -1,0 +1,22 @@
+# Набір битих записів для перевірки обробки помилок.
+
+# 1. Порушено загальний формат запису -> ValidationError
+ DEPT=DEV CODE=JET-1042 TOTAL=20 USED=14 COST=150.0
+
+# 2. Некоректний код ліцензії (не відповідає шаблону 2-4 літери + дефіс + 3-6 цифр) -> ValidationError
+# DEPT=DEV | CODE=123-ABC | TOTAL=20 | USED=14 | COST=150.0 | TYPE=SUB
+
+# 3. Неприпустимий тип ліцензії (очікується SUB або PERP) -> ValidationError
+# DEPT=DEV | CODE=JET-1042 | TOTAL=20 | USED=14 | COST=150.0 | TYPE=TRIAL
+
+# 4. Некоректний код відділу (занадто короткий або заборонені символи) -> ValidationError
+# DEPT=A | CODE=JET-1042 | TOTAL=20 | USED=14 | COST=150.0 | TYPE=SUB
+
+# 5. Порушення кількості місць (TOTAL має бути > 0) -> LicenseCapacityError
+# DEPT=DEV | CODE=JET-1042 | TOTAL=0 | USED=0 | COST=150.0 | TYPE=SUB
+
+# 6. Від'ємна кількість використаних місць (USED не може бути < 0) -> LicenseCapacityError
+# DEPT=DEV | CODE=JET-1042 | TOTAL=10 | USED=-2 | COST=150.0 | TYPE=SUB
+
+# 7. Від'ємна вартість ліцензії (COST не може бути < 0) -> LicenseCapacityError
+# DEPT=DEV | CODE=JET-1042 | TOTAL=10 | USED=5 | COST=-50.0 | TYPE=SUB
