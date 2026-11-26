@@ -1,0 +1,5 @@
+node-01.eu-central.cloud 0x0000 CPU:42.5% 2026-11-26T10:00:00Z
+550e8400-e29b-41d4-a716-446655440000 0x0002 CPU:94.2% 2026-11-26T10:01:00+02:00
+storage-02.eu-central.cloud 0x0001 RAM:8192MiB 2026-11-26T10:02:00Z
+storage-03.eu-central.cloud 0x0010 RAM:16384MiB 2026-11-26T10:03:00Z
+пошкоджений-рядок-без-полів
